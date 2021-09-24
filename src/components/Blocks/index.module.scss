@@ -1,0 +1,166 @@
+$colorBlue: #2EA8E6;
+$colorPink: #D91667;
+$colorGrey: #B3B3B3;
+
+.root {
+  font-family: 'Trebuchet MS';
+  font-weight: normal;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 40px;
+  @media screen and (min-width: 320px) and (max-width: 667px) {
+    flex-direction: column;
+    padding: 0;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
+}
+
+.container {
+  width: 320px;
+  height: 509px;
+  margin: 20px auto 0;
+  background: linear-gradient(
+    to bottom right,
+    transparent calc(6% - 1px),
+    $colorBlue 6%
+  );
+  border-radius: 10px;
+  @media screen and (min-width: 320px) and (max-width: 667px) {
+    margin-bottom: 50px;
+    width: 295px;
+    margin-top: 0;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    margin: 20px;
+  }
+
+  &.active {
+    background: linear-gradient(
+      to bottom right,
+      transparent calc(6% - 1px),
+      $colorPink 6%
+    ) ;
+  
+    .weight {
+      background-color: $colorPink;
+    }
+  }
+  
+  &.inactive {
+    background: linear-gradient(
+      to bottom right,
+      transparent calc(6% - 1px),
+      $colorGrey 6%
+    ) ;
+    user-select: none;
+    // pointer-events: none;
+    .wrapper {
+      opacity: 0.4;
+    }
+    .weight {
+      background-color: $colorGrey;
+    }
+  
+  }
+  .bold {
+    font-weight: 900;
+  }
+}
+.wrapper {
+  display: flex;
+  background: linear-gradient(
+  to bottom right,
+  transparent calc(6% - 1px),
+  white 6%
+  );
+  margin: 5px;
+  border-radius: 8px;
+  color: #666666;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+.block {
+  padding-top: 20px;
+  padding-left: 40px;
+  width: 100%;
+  margin: 5px;
+  height: 479px;
+  border-radius: 8px;
+  background-image: url('/images/cat.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin: 0 auto;
+  @media screen and (min-width: 320px) and (max-width: 667px) {
+    background-size: cover;
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    margin-top: 5px;
+    color: #000;
+  }
+  .subtitle {
+    font-size: 24px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 15px;
+  }
+  .weight {
+    background-color: $colorBlue;
+    border-radius: 50%;
+    font-size: 38px;
+    line-height: 22px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: absolute;
+    flex-direction: column;
+    right: 16px;
+    bottom: 16px;
+
+    &::after {
+      margin-top: 10px;
+      content: 'кг';
+      font-size: 21px;
+    }
+  }
+  .mouseOver {
+    color: $colorPink
+  }
+ 
+}
+.link {
+  color: $colorBlue;
+  text-decoration: none; 
+  border-bottom: 1px dashed $colorBlue;
+  cursor: pointer;
+}
+
+.text, .description {
+  color:white;
+  font-size: 13px;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 15px;
+}
+.notAvailable {
+  @extend .text;
+  color: yellow;  
+}
+
+
+

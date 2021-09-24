@@ -1,0 +1,31 @@
+[
+{
+  "title": "Нямушка",
+  "taste": "c фуа-гра",
+  "amount": 10,
+  "promotion": 1,
+  "weight": 0.5,
+  "description": "Печень утки разварная с артишоками.",
+  "available": false
+},
+{
+  "title": "Нямушка",
+  "taste": "c рыбой",
+  "amount": 40,
+  "promotion": 2,
+  "weight": 2, 
+  "description": "Головы щучьи с чесноком да свежайшая сёмгушка.",
+  "available": true
+
+}, 
+{
+  "title": "Нямушка",
+  "taste": "c курой",
+  "amount": 100,
+  "promotion": 5,
+  "rating": "заказчик доволен",
+  "weight": 5,
+  "description": "Филе из цыплят с трюфелями в бульоне.",
+  "available": true
+}
+]
