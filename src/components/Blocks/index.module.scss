@@ -72,6 +72,7 @@ $colorGrey: #B3B3B3;
 }
 .wrapper {
   display: flex;
+  outline: none;
   background: linear-gradient(
   to bottom right,
   transparent calc(6% - 1px),
@@ -87,6 +88,7 @@ $colorGrey: #B3B3B3;
 .block {
   padding-top: 20px;
   padding-left: 40px;
+  outline: none;
   width: 100%;
   margin: 5px;
   height: 479px;
